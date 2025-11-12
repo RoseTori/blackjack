@@ -1,13 +1,21 @@
 package com.blackjack.blackjack.entity;
 
+import java.util.ArrayList;
+
+import java.util.List;
+
 public class Hand {
     private List<Card> cards;
 
-    public addCard(Card card) {
+    public Hand() {
+        cards = new ArrayList<>();
+    }
+
+    public void addCard(Card card) {
         cards.add(card);
     }
 
-    public calculateValue() {
+    public int calculateValue() {
         int value = 0;
         int aceCount = 0;
 

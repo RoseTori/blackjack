@@ -1,9 +1,16 @@
 package com.blackjack.blackjack.entity;
 
+import java.util.List; 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import com.blackjack.blackjack.entity.Card.Rank;
+import com.blackjack.blackjack.entity.Card.Suit;
 import java.util.List;
 
 public class Deck {
-    private List<card> cards;
+    private List<Card> cards;
 
     public Deck() {
         cards = new ArrayList<>();
@@ -11,10 +18,11 @@ public class Deck {
         shuffle();
     }
 
-    public initialize() 
-    for (Suit suit : Suit.values()) {
-        for (Rank rank : Rank.values()) {
-            cards.add(new Card(suit, rank));
+    public void initialize() {
+        for (Suit suit : Suit.values()) {
+            for (Rank rank : Rank.values()) {
+                cards.add(new Card(suit, rank));
+            }
         }
     }
 
